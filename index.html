@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a Digit</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        #container {
+            text-align: center;
+            background-color: #ffc107; /* Orange background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+
+        h1 {
+            color: #343a40; /* Dark gray text color */
+        }
+
+        #result {
+            color: #007bff; /* Blue text color */
+        }
+
+        .btn {
+            margin-top: 15px;
+        }
+
+        canvas {
+            border: 1px solid #343a40; /* Dark gray border for the canvas */
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Нарисуйте цифру. Выполнила: Пикуль Мария P4209</h1>
+        <p id="result">Результат</p>
+        <div>
+            <button type="button" class="btn btn-primary btn-block" onclick="predictModel()">Обработать</button>
+            <button type="button" class="btn btn-secondary btn-block" onclick="erase()">Очистить</button>
+        </div>
+        <canvas id="canvas" width="386px" height="386px" class="canvas"></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
